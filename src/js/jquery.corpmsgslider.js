@@ -74,6 +74,8 @@
 				
 				$.ajax({
 					
+					"dataType" : "json",
+					
 					success : function (xmlHttpRequest, textStatus) {
 						
 						var
