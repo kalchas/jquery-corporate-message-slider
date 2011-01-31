@@ -21,6 +21,7 @@
 						"border" : "3px solid #000",
 						"menu" : {
 							
+							"background-color-fallback" : "rgb(0, 0, 0)",
 							"background-color" : "rgba(0, 0, 0, 0.5)",
 							"height" : "10%",
 							"width" : "65%"
@@ -233,7 +234,7 @@
 					"class" : "cpmsl-menu",
 					
 					"css" : {
-						
+						"background-color" : data.opts.menu["background-color-fallback"],
 						"background-color" : data.opts.menu["background-color"],
 						"height" : (parseInt(data.opts.menu.height, 10) / 100) * data.opts.height + 'px',
 						"width" : data.opts.menu.width
