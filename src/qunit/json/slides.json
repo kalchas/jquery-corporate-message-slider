@@ -1,0 +1,39 @@
+{
+	"slides" : [
+	
+		{
+			"img" : "images/commercial-slide.jpg",
+			"url" : "",
+			"background-color" : "#aa0007",
+			"caption" : "Commercial",
+			"color" : "#fff",
+			"font-family" : "Georgia",
+			"font-size" : "24px",
+			"letter-spacing" : ".1em"
+		},
+	
+		{
+			"img" : "images/healthcare-slide.jpg",
+			"url" : "",
+			"background-color" : "#333",
+			"caption" : "Health Care",
+			"color" : "#fff",
+			"font-family" : "Georgia",
+			"font-size" : "24px",
+			"letter-spacing" : ".1em"
+		}, 
+
+		{
+			"img" : "images/hospitality-slide.jpg",
+			"url" : "http://google.com",
+			"background-color" : "#aa0007",
+			"caption" : "Hospitality",
+			"color" : "#fff",
+			"font-family" : "Georgia",
+			"font-size" : "24px",
+			"letter-spacing" : ".1em"
+		}
+	
+	]
+	
+}
