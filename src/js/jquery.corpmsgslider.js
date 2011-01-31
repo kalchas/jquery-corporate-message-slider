@@ -1,5 +1,7 @@
 (function (win, doc, $, undefined) {
 	
+	'use strict';
+	
 	var
 		
 		//We don't really need to validate very much apart from a url, so we've borrowed this Regex from the jQuery validation plugin.
@@ -21,7 +23,6 @@
 						"border" : "3px solid #000",
 						"menu" : {
 							
-							"background-color-fallback" : "rgb(0, 0, 0)",
 							"background-color" : "rgba(0, 0, 0, 0.5)",
 							"height" : "10%",
 							"width" : "65%"
@@ -40,9 +41,7 @@
 						"image_y" : "0%",
 						'width' : 850
 						
-					}
-					
-				;
+					};//End init var
 				
 				data.opts = $.extend(defaults, options);
 				
@@ -69,9 +68,7 @@
 				
 					$this = $(this),
 					
-					data = $this.corpmsgslider('get_element_data')
-				
-				;
+					data = $this.corpmsgslider('get_element_data');//End get_slides var
 				
 				$.ajax({
 					
@@ -81,9 +78,7 @@
 						
 						var
 						
-							iter
-						
-						;
+							iter;//End success var.
 						
 						data.slides = (undefined === data.slides) ? [] : data.slides;
 						
@@ -131,9 +126,7 @@
 					
 						var
 						
-							data = $this.corpmsgslider('get_element_data')
-							
-						;
+							data = $this.corpmsgslider('get_element_data'); //End play var
 						
 						data.current_slide = (undefined === data.current_slide) ? 1 : data.current_slide;
 						
@@ -161,9 +154,7 @@
 							
 						}
 						
-					}
-				
-				;
+					};//End play_slides var
 				
 				setTimeout(play, data.opts.play_speed);
 				
@@ -177,9 +168,7 @@
 				
 					$this = $(this),
 					
-					data = $this.corpmsgslider('get_element_data')
-				
-				;
+					data = $this.corpmsgslider('get_element_data');//End swap_slides var
 				
 				if (undefined === data.current_slide) {
 					
@@ -225,16 +214,14 @@
 				
 					$this = $(this),
 					
-					data = $this.corpmsgslider('get_element_data')
-					
-				;
+					data = $this.corpmsgslider('get_element_data');//End wireframe var
 				
 				data.menu = $('<div />', {
 					
 					"class" : "cpmsl-menu",
 					
 					"css" : {
-						"background-color" : data.opts.menu["background-color-fallback"],
+
 						"background-color" : data.opts.menu["background-color"],
 						"height" : (parseInt(data.opts.menu.height, 10) / 100) * data.opts.height + 'px',
 						"width" : data.opts.menu.width
@@ -293,9 +280,7 @@
 				
 					$this = $(this),
 				
-					data
-					
-				;
+					data;//End get_element_data var
 				
 				//The element should default to $this.
 				
@@ -327,9 +312,7 @@
 					
 					data,
 					
-					old_data
-				
-				;
+					old_data;//End set_element_data var
 				
 				//The element should default to $this.
 				
@@ -375,9 +358,7 @@
 
 						var 
 
-							data = $this.corpmsgslider('get_element_data')
-
-						;
+							data = $this.corpmsgslider('get_element_data');//End click handler var
 
 						if (index !== data.current_slide) {
 
@@ -387,9 +368,7 @@
 
 					}),
 					
-					menu_height = (parseInt(data.opts.menu.height, 10) / 100) * data.opts.height
-
-				;
+					menu_height = (parseInt(data.opts.menu.height, 10) / 100) * data.opts.height;//End button_factory var
 				
 				button.appendTo(data.menu).css({
 				
@@ -454,9 +433,7 @@
 						
 						"class" : "cpmsl-slide-placer"
 						
-					})
-					
-				;
+					});//End slide_factory var
 				
 				if (url_regex.test(slide.url)) {
 					
@@ -480,9 +457,7 @@
 				
 			}
 			
-		}
-	
-	;
+		};//End module var
 	
 	$.fn.corpmsgslider = function (method) {
 		
